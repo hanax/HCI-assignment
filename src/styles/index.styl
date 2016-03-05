@@ -1,0 +1,170 @@
+@import 'nib'
+@import './font-awesome.min.css'
+
+*
+  box-sizing border-box
+
+body
+  font-size 16px
+  font-family Avenir, 'Open Sans', sans-serif
+  color rgb(20,20,20)
+  background-color #fff
+
+a
+  text-decoration none
+  outline 0
+  color rgb(20,20,20)
+  border-bottom 1px dashed rgb(60,60,60)
+  transition all .2s
+  &, &:active, &:focus
+    outline none
+  &:hover
+    background-color rgb(20,20,20)
+    color #fff
+    
+input
+  &, &:active, &:focus
+    outline none
+
+p
+  margin 0
+
+.card
+  width 100vw
+  height 100vh
+  margin 0
+  background-size cover
+  background-attachment fixed
+
+#card-intro
+  background-image url('/assets/bg_0.png')
+
+#card-mock
+  background-image url('/assets/bg_1.png')
+
+#card-bottom
+  background-image url('/assets/bg_2.png')
+
+.title-content
+  position absolute
+  top 40%
+  left 50%
+  width 70vw
+  @media screen and (max-width: 900px)
+    width 90vw
+  transform translate(-50%, -50%)
+
+h1
+  font-family 'Montserrat'
+  text-transform uppercase
+  font-size 110px
+  @media screen and (max-width: 900px)
+    font-size 55px
+  font-weight 300
+  letter-spacing 2px
+  text-align center
+  margin 0
+
+h2
+  font-family 'Dancing Script'
+  font-weight 100
+  text-align right
+  color #363c87
+  font-size 60px
+  margin-top -55px
+  @media screen and (max-width: 900px)
+    font-size 30px
+    margin-top 0px
+    text-align center
+
+.mock
+  position absolute
+  background-color rgba(255,255,255,.8)
+  margin-top -100px
+  left 50%
+  transform translateX(-50%)
+  border-radius 20px
+  width 350px
+  height 650px
+  box-shadow 0 0 20px rgba(0,0,0,.2)
+  @media screen and (max-width: 900px)
+    transform scale(.8) translateX(-62.5%)
+    margin-top -150px
+  .mock-content
+    background-color rgba(0,0,0,.2)
+    height 520px
+    margin 50px 20px 80px 20px
+    .mock-button
+      background-color rgba(0,0,0,.2)
+      border-radius 50%
+      height 50px
+      width 50px
+      position absolute
+      bottom 20px
+      left 150px
+
+.label
+  font-size 50px
+  font-family 'Montserrat'
+  position relative
+#label-1
+  top 5vh
+  left 60vw
+#label-2
+  top 30vh
+  left 20vw
+#label-3
+  top 45vh
+  left 65vw
+
+.bottom-content
+  height 100vh
+  width 100vw
+  text-align center
+  #bottom-desc
+    position absolute
+    left 50%
+    margin-top 40vh
+    transform translate(-50%, -50%)
+    font-family 'Montserrat'
+    background-color rgba(20,20,20,.9)
+    color #fff
+    font-size 38px
+    @media screen and (max-width: 900px)
+      font-size 20px
+      width 90vw
+    text-align center
+    letter-spacing 2px
+    padding 5px 10px
+  #signup-form
+    position relative
+    width 100vw
+    left 50vw
+    top 55vh
+    transform translate(-50%, -50%)
+    input
+      display inline
+      border 2px solid #363c87
+      height 50px
+      font-size 12px
+      padding 5px 10px
+    #mc-embedded-subscribe
+      background-color #363c87
+      color #fff
+      transition all .2s
+      &:hover
+        background-color rgb(20,20,20)
+
+#copyright
+  width 100vw
+  background linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.5))
+  color #fff
+  text-align center
+  position relative
+  line-height 40px
+  bottom 40px
+  font-size 12px
+  a
+    color #fff
+    border-bottom 1px dashed #fff
+  
