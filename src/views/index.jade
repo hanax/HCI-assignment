@@ -4,7 +4,7 @@ html
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width,initial-scale=1')
 
-    title Name
+    title Illuminate
 
     meta(name='description' content='HCI design assignment')
     meta(name='keywords' content='HCI museum art')
@@ -32,7 +32,18 @@ html
       .title-content
         h1 Illuminate
         h2 Expose your creative spirit
-        h3 We aim to provide you a fun way to interact with art in a museum by guiding you through a scavenger hunt that asks you to expand your world, consider new thoughts, and inspire you to use the create spirit inside of you.
+        h3 
+          //- span.fa.fa-quote-left 
+          .desc-content We aim to provide you a fun way to interact with art in a museum by guiding you through a scavenger hunt that asks you to expand your world, consider new thoughts, and inspire you to use the create spirit inside of you.
+      .header-stick
+        img(src='./assets/favicon.png')
+        span.title ILLUMINATE
+        .menu
+          span.fa.fa-bars
+        ul.menu-dropdown
+          li: a(href='#card-intro'): p Intro
+          li: a(href='#card-mock'): p Demo
+          li: a(href='#card-bottom'): p CTA
     .card#card-mock
       .mock
         .mock-content
@@ -46,7 +57,7 @@ html
           p Examine
     .card#card-bottom
       .bottom-content
-        span#bottom-desc Illuminate, expose your creative spirit.
+        span#bottom-desc ILLUMINATE. Expose your creative spirit.
         #signup-form
           #mc_embed_signup
             form#mc-embedded-subscribe-form.validate(action='//wuyan.us11.list-manage.com/subscribe/post?u=149ebfe729c0bda36be6432bd&id=cd2eeceb05', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')

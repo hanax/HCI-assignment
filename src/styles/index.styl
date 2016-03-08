@@ -11,6 +11,10 @@ body
   background-color #fff
   overflow-x hidden
 
+ul
+  padding 0
+  list-style-type none
+
 a
   text-decoration none
   outline 0
@@ -21,7 +25,7 @@ a
     outline none
   &:hover
     background-color rgb(20,20,20)
-    color #fff
+    color rgba(0,0,0,.5)
     
 input
   &, &:active, &:focus
@@ -34,11 +38,66 @@ p
   width 100vw
   height 100vh
   margin 0
-  background-size cover
   background-attachment fixed
+  @media screen and (min-width: 900px)
+    background-size cover
 
 #card-intro
   background-image url('http://hanax.co/HCI_assignment/assets/bg_0.jpg')
+  .header-stick
+    display block
+    position fixed
+    text-align left
+    left 0
+    top 0
+    // background linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,0))
+    width 100vw
+    color rgba(0,0,0,.8)
+    z-index 10
+    img
+      position fixed
+      size 40px
+      margin 20px 20px
+    .title
+      font-family 'Montserrat'
+      display none
+      float left
+      padding-left 5%
+      @media screen and (max-width: 900px)
+        padding-left 80px
+      font-size 16px
+      line-height 80px
+      text-shadow -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff
+      letter-spacing 1px
+    .menu
+      float right
+      padding-right 5%
+      display inline-block
+      line-height 70px
+      color rgba(0,0,0,.8)
+      font-size 20px
+      text-shadow -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff
+      &:hover
+        cursor pointer
+    ul.menu-dropdown
+      position fixed
+      display none
+      top 50px
+      right 5%
+      @media screen and (max-width: 900px)
+        width 90vw
+        left 5vw
+      background-color rgba(255,255,255,.8)
+      width 200px
+      color rgba(0,0,0,.8)
+      border-radius 3px
+      border 1px solid rgba(0,0,0,.8)
+      padding-left 30px
+      li
+        line-height 50px
+        transition transform .3s
+        &:hover
+          transform translateX(2px)
 
 #card-mock
   background-image url('http://hanax.co/HCI_assignment/assets/bg_1.jpg')
@@ -51,7 +110,7 @@ p
 
 .title-content
   position absolute
-  top 40%
+  top 45%
   left 50%
   width 70vw
   @media screen and (max-width: 900px)
@@ -82,10 +141,14 @@ h2
     text-align center
     
 h3
-  font-size 18px
-  font-weight 300
-  text-align center
-  color rgba(0,0,0,.5)
+  span
+    font-size 30px
+    margin 0 10px
+  .desc-content
+    font-size 18px
+    font-weight 300
+    text-align center
+    color rgba(0,0,0,.5)
 
 .mock
   position absolute
@@ -140,7 +203,7 @@ h3
     position absolute
     left 50%
     margin-top 40vh
-    width 750px
+    width 850px
     transform translate(-50%, -50%)
     font-family 'Montserrat'
     background-color rgba(20,20,20,.9)
